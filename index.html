@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"> 
-     <title> Прогноз погоды по обласным центрам </title>
+     <meta charset="utf-8"> 
+     <title> Форма ввода данных </title>
   </head>
   <body>
-        <h1>The Wether</h1>
-        <figure>
-        <img src="poltava.jpg" alt = "Фото Полтави" >
-          <figcaption>
-         Фото <a href="https://moqups.com/malinka/dE69x1v0/p:a1c4a6808"> Макет</a>
-          </figcaption>
-        </figure>
+
+<form>
+	
+	 <label for="name">Name</label>
+     <input type="text" name="name" required/> 
+
+     <p><label for="email">E-mail</label>
+     <input type="email" name="email" required></p>
+
+     <p><label for="ip">Введіть IP-адресу</label>
+     <input type="text" name="ip" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" required></p>
+
+     <p>Введіть шістнадцятирічне значння кольору (повинно починатися з #)<br>
+     <input type="text" name="digit" required pattern="#[0-9A-Fa-f]{6}"></p>
+
+     <p>Введіть поштовий індекс<br>
+     <input type="text" name="postindex" required pattern="[0-9]{6}"></p>
+
+
+     <p><input type="submit" value="Відправити"></p>
+
+     <p>Коментар<br>
+     <textarea name="commentar" rows="5" cols="20"></textarea></p>
+
+    <p>Напишіть місто<br><input list="mista"></p>
+   <datalist id="mista">
+    <option>Київ</option>
+    <option>Полтава</option>
+    <option>Львів</option>
+    <option>Харків</option>
+    <option>Одесса</option>
+    <option>Кіровоград</option>
+   </datalist>
+
+
+   <p><select size="2" multiple neme="mista">
+    <option disabled>Оберіть місто</option>
+    <option>Київ</option>
+    <option>Полтава</option>
+    <option>Львів</option>
+    <option>Харків</option>
+    <option>Одесса</option>
+   </select></p>
+   
+
+
+</form>
+
+
+
   </body>
-</html>
+  </html>
