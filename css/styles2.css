@@ -1,0 +1,133 @@
+body {
+    color: #8f8f8f;
+    font: 12px Tahoma, sans-serif;
+    background-color: #FFFFFF;
+    /*border-top: 5px solid #7e7e7e;*/
+    margin: 0;
+}
+#wrapper {
+    max-width: 1220px;
+    margin: auto;
+}
+header {
+    padding: 20px 0;
+}
+           /*выравнивание формы поиска по правому краю*/
+form[name="search"] {
+    float: right;
+
+}
+            /*стиль полоски*/
+hr {
+    height: 5px;
+    background-color: #8B4513;
+    border: none;  
+}
+
+#contenting{
+    display: block;
+    width: 1220px;
+    height: 320px;
+    background-color: #FFFAF0;
+}
+
+            /*розделение на колонки*/
+aside {
+    float: left;
+    width: 500px;
+
+}
+section {
+    margin-left: 500px;
+    padding-bottom: 50px;
+
+}
+            /* Стиль для div (погода у львовы)*/
+.misto {
+    display: block;
+    width: 500px;
+    height: 80px;
+    background-color: #DEB887;
+    color: #8B4513;
+    font: 45px 'Oswald', sans-serif;
+    text-align: center;
+    border-radius: 15px;
+    border-color: #8B4513;
+}
+.pusto {
+    display: block;
+    width: 500px;
+    height: 120px;
+    background-color: #FFFAF0;
+    color: #FFFAF0;
+    font: 45px 'Oswald', sans-serif;
+}
+.tabl_mal {
+    color: #000000;
+    font: 25px 'Oswald', sans-serif;
+    border-radius: 15px;
+    border-color: #8B4513;
+}
+
+            /* Стили для меню нав( коротко.докладно)*/
+nav a {
+    text-decoration: none;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    font: 20px 'Oswald', sans-serif;
+    padding: 10px;
+}
+
+.top-menu li {
+    display: inline-block;
+    padding: 15px 80px;
+    margin: 0;
+}
+
+.top-menu li.active {
+    background: #8B4513;
+    color: #fff;
+}
+
+.top-menu a {
+    color: #8B4513;
+}
+
+figure {
+    display: block;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+figure img {
+    display: block;
+    border: 1px solid #fff;
+    outline: 1px solid #c9c9c9;
+    float: right;
+
+}
+.week{
+    display: inline-block;
+    background-color: #FFFAF0;
+    width: 1220px;
+    height: 1430px;
+}
+.tabl_mal1 {
+    display: inline-table;
+    width: 1200px;
+    height: 200px;
+    background-color: #FFF8DC;
+    color: #8B4513;
+    font: 25px 'Oswald', sans-serif;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 10px;
+    float: right;
+}
+

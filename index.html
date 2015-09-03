@@ -1,59 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-     <meta charset="utf-8"> 
-     <title> Форма ввода данных </title>
-  </head>
-  <body>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Сайт прогнозу погоди</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
 
-<form>
-	
-	 <label for="name">Name</label>
-     <input type="text" name="name" required/> 
-
-     <p><label for="email">E-mail</label>
-     <input type="email" name="email" required></p>
-
-     <p><label for="ip">Введіть IP-адресу</label>
-     <input type="text" name="ip" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" required></p>
-
-     <p>Введіть шістнадцятирічне значння кольору (повинно починатися з #)<br>
-     <input type="text" name="digit" required pattern="#[0-9A-Fa-f]{6}"></p>
-
-     <p>Введіть поштовий індекс<br>
-     <input type="text" name="postindex" required pattern="[0-9]{6}"></p>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
 
 
-     <p><input type="submit" value="Відправити"></p>
+<div id="wrapper">
+    <!-- Верхняя шапка-->
+    <header>
+        <img src="images/karta.jpg" align="left" height="100px" width="150px" hspace="150px" alt="Karta">
+        <a href="/"><img src="images/logo.png" height="100px" width="450px" alt="Logo the weather"></a>
 
-     <p>Коментар<br>
-     <textarea name="commentar" rows="5" cols="20"></textarea></p>
-
-    <p>Напишіть місто<br><input list="mista"></p>
-   <datalist id="mista">
-    <option>Київ</option>
-    <option>Полтава</option>
-    <option>Львів</option>
-    <option>Харків</option>
-    <option>Одесса</option>
-    <option>Кіровоград</option>
-   </datalist>
-
-
-   <p><select size="2" multiple neme="mista">
-    <option disabled>Оберіть місто</option>
-    <option>Київ</option>
-    <option>Полтава</option>
-    <option>Львів</option>
-    <option>Харків</option>
-    <option>Одесса</option>
-   </select></p>
-   
+        <form name="search" action="#" method="get">
+            <select neme="goroda">
+                <option>Оберіть місто</option>
+                <option>Полтава</option>
+                <option>Київ</option>
+                <option>Львів</option>
+                <option>Одесса</option>
+                <option>Харків</option>
+            </select>
+        </form>
+        <hr>
+    </header>
 
 
-</form>
+    <div id="contenting">
+
+        <aside>
+
+            <div class="misto" border="1">Погода у <span id="location"></span></div>
+
+           <table id="weatherTable" border="1">
+                <tr>
+                </tr>
+            </table>
+
+            <p id="error"></p>
 
 
+            <table id="tabl_mal" align="center" width="400">
+                <tr>
+                    <th class="day" height="70"></th>
+                    <th height="70"></th>
+                </tr>
 
-  </body>
-  </html>
+                <tr align="center">
+                    <td height="70"></td>
+                    <td height="70"></td>
+
+                </tr>
+                <tr align="center">
+                    <td height="100" colspan="2"></td>
+
+                </tr>
+            </table>
+            <p></p>
+
+            <nav>
+                <ul class="top-menu" align="center" border="1">
+                    <li class="active">коротко</li>
+                    <li><a href="/dokladno/">докладно</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </aside>
+
+        <section>
+            <figure>
+                <img src="images/lviv1.png" width="600" height="450" alt="">
+            </figure>
+        </section>
+
+    </div>
+
+
+    <div class="week"></div>
+</div>
+
+
+<footer>
+    <hr>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+<script src="scripts/weatherService.js"></script>
+<script src="scripts/weatherByCity.js"></script>
+<script src="scripts/script.js"></script>
+
+</body>
+</html>
+
